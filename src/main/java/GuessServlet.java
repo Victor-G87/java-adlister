@@ -6,15 +6,17 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class GuessGame {
+public class GuessServlet {
 
     @WebServlet("/guess")
     public class ViewCounterServlet extends HttpServlet {
 
-        int random = (int)(Math.random() * 3 + 1);
-
         @Override
-        protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+
+            int random = (int)(Math.random() * 3 + 1);
+
+
             String name = request.getParameter("name");
             // if the name is null, it means that "name" was not present in the query
             // string, and here we'll provide a default value
