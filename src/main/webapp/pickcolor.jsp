@@ -17,6 +17,8 @@
 <body>
 COLOR PICKER
 
+<form action="/pickcolor.jsp" method="POST">
+
 <input type="text" id="colorInputText">
 
 <input type="button" id="colorButton" value="Click to Change Color"
